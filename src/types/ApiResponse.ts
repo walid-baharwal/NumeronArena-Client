@@ -25,16 +25,14 @@ export interface IPlayerRecord{
 
 }
 
+export interface IAthToken{
+  accessToken: string;
+  refreshToken: string;
+}
+
 export interface ApiResponse {
   statusCode?: number;
   success: boolean;
   message: string;
-  data?:{
-    user?: IUser | IPlayerRecord;
-    accessToken?: string;
-    refreshToken?: string;
-  
-
-  }
-
+  data?: IUser | IPlayerRecord | IAthToken;
 }
