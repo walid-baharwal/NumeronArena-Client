@@ -6,9 +6,13 @@ export interface IUser {
   fullName: string;
   friends: string[]; 
   isVerified: boolean;
+  avatar?:{
+    url:string,
+    public_id:string
+  }
   createdAt: string; 
   updatedAt: string;
-  __v: number;
+  __v?: number;
   refreshToken: string;
 }
 
@@ -21,11 +25,11 @@ export interface IPlayerRecord{
   highestScore:number;
   createdAt: string;
   updatedAt: string;
-  __v: number;
+  __v?: number;
 
 }
 
-export interface IAthToken{
+export interface IAuthToken{
   accessToken: string;
   refreshToken: string;
 }
@@ -34,5 +38,5 @@ export interface ApiResponse {
   statusCode?: number;
   success: boolean;
   message: string;
-  data?: IUser | IPlayerRecord | IAthToken;
+  data?: IUser | IPlayerRecord | IAuthToken;
 }
