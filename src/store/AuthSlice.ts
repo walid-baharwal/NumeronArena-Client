@@ -17,6 +17,11 @@ export const authSlice = createSlice({
   reducers: {
     setUser: (state, action) => {
       state.userData = action.payload;
+      state.status = true;
+      console.log("store  called");
+    },
+    setStatus: (state, action) => {
+      state.status = action.payload;
     },
     onLogout: (state) => {
       state.status = false;
@@ -25,5 +30,5 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setUser,onLogout } = authSlice.actions;
+export const { setUser,onLogout,setStatus } = authSlice.actions;
 export const authReducer = authSlice.reducer;

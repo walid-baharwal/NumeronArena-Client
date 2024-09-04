@@ -33,10 +33,13 @@ export interface IAuthToken{
   accessToken: string;
   refreshToken: string;
 }
+export interface IUsername{
+  username:string;
+}
 
 export interface ApiResponse {
   statusCode?: number;
   success: boolean;
   message: string;
-  data?: IUser | IPlayerRecord | IAuthToken;
+  data?: IUser | IPlayerRecord | IAuthToken | IUsername;
 }
