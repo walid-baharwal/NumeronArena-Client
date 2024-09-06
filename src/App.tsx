@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { getUserData, updateAccessToken } from "./api/apiUtils";
 import { setUser } from "./store/AuthSlice";
 import { useTypedDispatch } from "./store/store";
+import Loading from "@/components/Loading";
 
 function App() {
   const dispatch = useTypedDispatch();
@@ -25,7 +26,9 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return   isLoading ? <h1>Loading...</h1> : (
+  return   isLoading ? <Loading/>
+  
+  : (
     <>
       <div>
         <Outlet />

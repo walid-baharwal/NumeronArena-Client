@@ -51,7 +51,6 @@ const router = createBrowserRouter(
     </Route>
     <Route path="/auth" element={<Auth/>}>
     <Route
-      
           element={<Navigate to="signin" replace />}
         />
 
