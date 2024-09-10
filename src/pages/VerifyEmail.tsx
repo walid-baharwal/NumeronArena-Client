@@ -61,10 +61,10 @@ const VerifyEmail = () => {
             </InputOTPGroup>
           </InputOTP>
           <div className="text-center text-sm -ml-2 mt-2 ">
-          Enter the 6-digit code sent to your email.
-      </div>
+            Enter the 6-digit code sent to your email.
+          </div>
         </div>
-        <div className="text-center text-sm px-2  -mt-6" >
+        <div className="text-center text-sm px-2  -mt-6">
           {isCheckingCode ? (
             <>
               <Loader2 size={25} className=" animate-spin" />
@@ -72,7 +72,6 @@ const VerifyEmail = () => {
           ) : (
             <div className="w-5 "></div>
           )}
-     
         </div>
       </div>
     </div>
