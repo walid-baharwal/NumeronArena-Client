@@ -36,10 +36,17 @@ export interface IAuthToken{
 export interface IUsername{
   username:string;
 }
+export type TFriend ={
+  _id: string | number;
+  username: string;
+  fullName: string;
+  avatar?: string;
+}
+
 
 export interface ApiResponse {
   statusCode?: number;
   success: boolean;
   message: string;
-  data?: IUser | IPlayerRecord | IAuthToken | IUsername;
+  data?: IUser | IPlayerRecord | IAuthToken | IUsername | TFriend[];
 }

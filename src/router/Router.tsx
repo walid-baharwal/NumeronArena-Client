@@ -10,7 +10,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<App />} errorElement={<ErrorElement />}>
         <Route path="" element={<Home />} />
         <Route
-          path="profile"
+          path="profile/:username"
           element={<Protected authentication>{/* Profile Page here */}</Protected>}
         />
         <Route
