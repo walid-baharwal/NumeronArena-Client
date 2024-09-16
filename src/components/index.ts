@@ -5,6 +5,7 @@ import Loading from "./Loading";
 import ErrorElement from "./ErrorElement";
 import FriendItem from "./FriendItem";
 import FriendsDropdown from "./FriendsDropdown";
+import FriendItemMemo from "./FriendItemMemo";
+import CustomDropdown from "./CustomDropdown";
 
-
-export { Header, Protected, ThemeProvider, Loading, ErrorElement , FriendItem, FriendsDropdown }
+export { Header, Protected, ThemeProvider, Loading, ErrorElement , FriendItem, FriendsDropdown , FriendItemMemo, CustomDropdown}

@@ -1,20 +1,23 @@
+import { TFriend } from "@/types/ApiResponse";
 import { createSlice } from "@reduxjs/toolkit";
-// import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface IAppState {
-  data : null
+  friends : TFriend[] | null
 }
 
 const initialState: IAppState = {
-  data : null
+  friends : null
 };
 
 export const appSlice = createSlice({
   name: "app",
   initialState,
   reducers: {
+    setFriends: (state, action) => {
+      state.friends = action.payload;
+    },
   },
 });
 
-// export const {  } = appSlice.actions;
+ export const { setFriends } = appSlice.actions;
 export const appReducer = appSlice.reducer;

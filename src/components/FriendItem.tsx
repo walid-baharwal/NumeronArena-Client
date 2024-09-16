@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 const FriendItem = ({ friend }: { friend: TFriend }) => {
   return (
-    <div className="flex items-center justify-between rounded-lg px-3 py-[9px] transition-colors   bg-black/50 w-full ">
+    <div className="flex items-center justify-between rounded-lg px-3 py-[9px] transition-colors   bg-black/50 w-full hover:bg-red-500/20 ">
       <Link
         key={friend?._id}
         className={`flex items-center gap-2    `}
